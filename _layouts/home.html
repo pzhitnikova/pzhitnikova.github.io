@@ -2,8 +2,7 @@
 layout: default
 ---
 
-<h1 class="visually-hidden">{{ site.title }} — {{ site.tagline }}</h1>
-<p class="label intro-label fade-up">Collections &amp; Shows</p>
+<h1 class="visually-hidden">{{ site.title }}, {{ site.tagline }}</h1>
 
 <section class="grid">
   {%- assign projects = site.projects | where_exp: "p", "p.published != false" | sort: "order" -%}
@@ -28,7 +27,7 @@ layout: default
       <span class="num" aria-hidden="true">{{ forloop.index | prepend: '00' | slice: -2, 2 }}</span>
       <figure>
         {%- if cover_path -%}
-        <img src="{{ cover_path | relative_url }}" alt="{{ p.title }} — cover look"
+        <img src="{{ cover_path | relative_url }}" alt="{{ p.title }}, cover"
              {% if forloop.index <= 2 %}fetchpriority="high"{% else %}loading="lazy"{% endif %}>
         {%- endif -%}
       </figure>

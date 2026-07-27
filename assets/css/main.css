@@ -127,13 +127,12 @@ a:focus-visible, button:focus-visible {
 
 /* ── Home: griglia progetti ───────────────────────────────── */
 
-.intro-label { margin: clamp(2.5rem, 7vh, 4.5rem) 0 3.2rem; }
-
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: clamp(2rem, 5vw, 4.5rem);
   row-gap: clamp(4rem, 9vh, 6.5rem);
+  margin-top: clamp(3rem, 8vh, 5.5rem);
   padding-bottom: clamp(5rem, 12vh, 8rem);
 }
 

@@ -11,8 +11,6 @@ video_poster: poster.jpg
 video_caption: Runway, Krakow Fashion Week 2024
 ---
 
-<!-- Sostituisci questo testo con il tuo concept statement (2-4 frasi). -->
+<!-- Sostituisci questa riga con il tuo concept statement. -->
 
-A look presented at the No Waste Show during Krakow Fashion Week 2024: a
-deconstructed corset dress in black, beaded throughout, worn with a raw-edged
-tulle veil and scarlet hosiery. Hardware left exposed, seams left visible.
+Look presented at the No Waste Show, Krakow Fashion Week 2024.

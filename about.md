@@ -4,6 +4,6 @@ title: About
 permalink: /about/
 ---
 
-P. Zhitnikova is a fashion designer. Her work has been shown at Krakow Fashion Week.
+P. Zhitnikova is a fashion designer.
 
-For collaborations, commissions or press, get in touch.
+Work shown at Krakow Fashion Week.

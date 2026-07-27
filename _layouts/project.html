@@ -43,7 +43,7 @@ layout: default
       {%- if ext == '.jpg' or ext == '.jpeg' or ext == '.png' or ext == '.webp' or ext == '.avif' or ext == '.gif' -%}
         {%- unless f.name contains 'poster' -%}
         <figure class="look">
-          <img src="{{ f.path | relative_url }}" alt="{{ page.title }} — look {{ forloop.index }}" loading="lazy">
+          <img src="{{ f.path | relative_url }}" alt="{{ page.title }}, look {{ forloop.index }}" loading="lazy">
         </figure>
         {%- endunless -%}
       {%- endif -%}
