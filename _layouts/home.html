@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<h1 class="visually-hidden">{{ site.title }} — {{ site.tagline }}</h1>
+<p class="label intro-label fade-up">Collections &amp; Shows</p>
+
+<section class="grid">
+  {%- assign projects = site.projects | where_exp: "p", "p.published != false" | sort: "order" -%}
+  {%- for p in projects -%}
+    {%- assign proj_dir = '/assets/projects/' | append: p.slug | append: '/' -%}
+    {%- assign files = site.static_files | where_exp: "f", "f.path contains proj_dir" | sort: "path" -%}
+    {%- assign cover_path = nil -%}
+    {%- if p.cover -%}
+      {%- assign cover_path = proj_dir | append: p.cover -%}
+    {%- else -%}
+      {%- for f in files -%}
+        {%- assign ext = f.extname | downcase -%}
+        {%- if ext == '.jpg' or ext == '.jpeg' or ext == '.png' or ext == '.webp' or ext == '.avif' -%}
+          {%- unless f.name contains 'poster' -%}
+            {%- assign cover_path = f.path -%}
+            {%- break -%}
+          {%- endunless -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endif -%}
+    <a class="card fade-up" href="{{ p.url | relative_url }}" style="--d:{{ forloop.index0 | times: 90 }}ms">
+      <span class="num" aria-hidden="true">{{ forloop.index | prepend: '00' | slice: -2, 2 }}</span>
+      <figure>
+        {%- if cover_path -%}
+        <img src="{{ cover_path | relative_url }}" alt="{{ p.title }} — cover look"
+             {% if forloop.index <= 2 %}fetchpriority="high"{% else %}loading="lazy"{% endif %}>
+        {%- endif -%}
+      </figure>
+      <span class="card-line">
+        <span class="card-title"><span>{{ p.title }}</span></span>
+        <span class="card-year">{{ p.year }}</span>
+      </span>
+    </a>
+  {%- endfor -%}
+</section>

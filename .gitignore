@@ -1,0 +1,8 @@
+env
+.env
+*.env
+.DS_Store
+Thumbs.db
+_site/
+.jekyll-cache/
+.jekyll-metadata

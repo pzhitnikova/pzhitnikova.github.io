@@ -1,0 +1,92 @@
+---
+layout: default
+---
+
+{%- assign proj_dir = '/assets/projects/' | append: page.slug | append: '/' -%}
+{%- assign files = site.static_files | where_exp: "f", "f.path contains proj_dir" | sort: "path" -%}
+
+<article class="project">
+  <p class="backlink fade-up"><a class="textlink" href="{{ '/' | relative_url }}">&#8592; Index</a></p>
+
+  <header class="project-head fade-up" style="--d:70ms">
+    <h1 class="serif">{{ page.title }}</h1>
+    {%- assign meta = "" | split: "" -%}
+    {%- if page.event %}{% assign meta = meta | push: page.event %}{% endif -%}
+    {%- if page.location %}{% assign meta = meta | push: page.location %}{% endif -%}
+    {%- if page.year %}{% assign year_s = page.year | append: "" %}{% assign meta = meta | push: year_s %}{% endif -%}
+    {%- if meta.size > 0 -%}
+    <p class="label project-meta">{{ meta | join: " &nbsp;&middot;&nbsp; " }}</p>
+    {%- endif -%}
+  </header>
+
+  {%- assign body = content | strip -%}
+  {%- if body != "" -%}
+  <div class="project-body fade-up" style="--d:140ms">
+    {{ content }}
+  </div>
+  {%- endif -%}
+
+  {%- if page.materials or page.credits -%}
+  <dl class="project-details fade-up" style="--d:180ms">
+    {%- if page.materials -%}
+    <div><dt class="label">Materials</dt><dd>{{ page.materials }}</dd></div>
+    {%- endif -%}
+    {%- if page.credits -%}
+    <div><dt class="label">Credits</dt><dd>{{ page.credits }}</dd></div>
+    {%- endif -%}
+  </dl>
+  {%- endif -%}
+
+  <div class="lookbook">
+    {%- for f in files -%}
+      {%- assign ext = f.extname | downcase -%}
+      {%- if ext == '.jpg' or ext == '.jpeg' or ext == '.png' or ext == '.webp' or ext == '.avif' or ext == '.gif' -%}
+        {%- unless f.name contains 'poster' -%}
+        <figure class="look">
+          <img src="{{ f.path | relative_url }}" alt="{{ page.title }} — look {{ forloop.index }}" loading="lazy">
+        </figure>
+        {%- endunless -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- if page.video -%}
+    <figure class="look look-video">
+      <video controls playsinline preload="metadata"
+             {% if page.video_poster %}poster="{{ proj_dir | append: page.video_poster | relative_url }}"{% endif %}
+             src="{{ proj_dir | append: page.video | relative_url }}"></video>
+      {%- if page.video_caption -%}<figcaption class="label">{{ page.video_caption }}</figcaption>{%- endif -%}
+    </figure>
+    {%- endif -%}
+  </div>
+
+  {%- assign projects = site.projects | where_exp: "p", "p.published != false" | sort: "order" -%}
+  {%- assign prev_p = nil -%}{%- assign next_p = nil -%}
+  {%- for p in projects -%}
+    {%- if p.url == page.url -%}
+      {%- unless forloop.first -%}
+        {%- assign prev_i = forloop.index0 | minus: 1 -%}
+        {%- assign prev_p = projects[prev_i] -%}
+      {%- endunless -%}
+      {%- unless forloop.last -%}
+        {%- assign next_i = forloop.index0 | plus: 1 -%}
+        {%- assign next_p = projects[next_i] -%}
+      {%- endunless -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- if prev_p or next_p -%}
+  <nav class="project-pager" aria-label="Projects">
+    <div>
+      {%- if prev_p -%}
+      <p class="label">Previous</p>
+      <a class="serif pager-link" href="{{ prev_p.url | relative_url }}">{{ prev_p.title }}</a>
+      {%- endif -%}
+    </div>
+    <div class="pager-next">
+      {%- if next_p -%}
+      <p class="label">Next</p>
+      <a class="serif pager-link" href="{{ next_p.url | relative_url }}">{{ next_p.title }}</a>
+      {%- endif -%}
+    </div>
+  </nav>
+  {%- endif -%}
+</article>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- assign page_title = page.title | default: site.title -%}
+  {%- if page.url == "/" -%}
+  <title>{{ site.title }} — {{ site.tagline }}</title>
+  {%- else -%}
+  <title>{{ page_title }} — {{ site.title }}</title>
+  {%- endif -%}
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon.svg' | relative_url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ page_title }} — {{ site.title }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  {%- if page.og_image -%}
+  <meta property="og:image" content="{{ page.og_image | absolute_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  {%- endif -%}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:ital,wght@0,200;0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-head">
+    <a class="mast" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="{{ '/' | relative_url }}" {% if page.url == "/" %}aria-current="page"{% endif %}>Work</a>
+      <a href="{{ '/about/' | relative_url }}" {% if page.url == "/about/" %}aria-current="page"{% endif %}>About</a>
+    </nav>
+  </header>
+  <main id="main">
+    {{ content }}
+  </main>
+  <footer class="site-foot">
+    <p class="foot-name">{{ site.author.name }}</p>
+    <p class="foot-links">
+      {%- if site.author.email != "" -%}
+      <a class="textlink" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+      {%- endif -%}
+      {%- if site.author.instagram != "" -%}
+      <a class="textlink" href="https://www.instagram.com/{{ site.author.instagram }}" rel="noopener">Instagram</a>
+      {%- endif -%}
+    </p>
+    <p class="foot-copy">© {{ site.time | date: "%Y" }} {{ site.author.name }}</p>
+  </footer>
+</body>
+</html>

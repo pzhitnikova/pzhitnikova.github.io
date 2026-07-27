@@ -1,0 +1,38 @@
+# ── Impostazioni del sito ─────────────────────────────────────
+# Modifica qui nome, bio breve e contatti: il resto del sito si aggiorna da solo.
+
+title: ZHITNIKOVA            # nome nel masthead e nel footer
+tagline: Fashion Designer
+description: >-
+  Fashion design portfolio of P. Zhitnikova — collections, runway shows and selected work.
+
+url: "https://pzhitnikova.github.io"
+baseurl: ""
+lang: en
+
+author:
+  name: P. Zhitnikova        # nome esteso (footer, about)
+  email: ""                  # es. nome@dominio.com — se vuoto, il link non appare
+  instagram: ""              # solo lo username, senza @ — se vuoto, il link non appare
+
+# ── Progetti ──────────────────────────────────────────────────
+# Ogni file in _projects/ diventa una pagina a sé: /<nome-file>/
+collections:
+  projects:
+    output: true
+    permalink: /:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+
+# ── Tecnica (non toccare) ─────────────────────────────────────
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+exclude:
+  - README.md
+  - docs
