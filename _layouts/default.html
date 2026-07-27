@@ -20,7 +20,7 @@
   <meta property="og:image" content="{{ page.og_image | absolute_url }}">
   <meta name="twitter:card" content="summary_large_image">
   {%- endif -%}
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.github.build_revision | slice: 0, 7 }}">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
