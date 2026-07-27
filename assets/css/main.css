@@ -1,7 +1,7 @@
 /* ═══════════════════════════════════════════════════════════════
    ZHITNIKOVA — Backstage Noir
    Editorial runway portfolio: near-black stage, ivory type,
-   scarlet accent. Cormorant Garamond (display) + Jost (labels).
+   scarlet accent. House typography: Helvetica + Times italic.
    ═══════════════════════════════════════════════════════════════ */
 
 :root {
@@ -11,8 +11,8 @@
   --ink-dim:   #9a9186;
   --rule:      #2b2823;
   --accent:    #d92632;
-  --serif:     'Cormorant Garamond', 'Times New Roman', serif;
-  --sans:      'Jost', 'Century Gothic', 'Futura', sans-serif;
+  --serif:     'Times New Roman', Times, Georgia, serif;
+  --sans:      'Helvetica Neue', Helvetica, Arial, sans-serif;
   --measure:   62ch;
   --gutter:    clamp(1.25rem, 4vw, 3.5rem);
 }
@@ -33,10 +33,10 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--sans);
-  font-weight: 300;
-  font-size: 1.0rem;
+  font-weight: 400;
+  font-size: .95rem;
   line-height: 1.75;
-  letter-spacing: .015em;
+  letter-spacing: .01em;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -54,7 +54,7 @@ a:focus-visible, button:focus-visible {
 
 .serif {
   font-family: var(--serif);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: .01em;
 }
 
@@ -100,7 +100,7 @@ a:focus-visible, button:focus-visible {
 
 .mast {
   font-family: var(--sans);
-  font-weight: 300;
+  font-weight: 400;
   font-size: clamp(.95rem, 2.4vw, 1.15rem);
   letter-spacing: .5em;
   margin-right: -.5em; /* compensa lo spazio dell'ultima lettera */
@@ -257,23 +257,28 @@ a:focus-visible, button:focus-visible {
 .project-details dt { padding-top: .2em; }
 .project-details dd { margin: 0; font-size: .96rem; }
 
-/* Lookbook: flusso verticale, le foto respirano nel nero */
+/* Lookbook: dittico — foto a coppie, video centrato sotto */
 .lookbook {
   margin: clamp(3.5rem, 9vh, 6rem) 0 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: clamp(3rem, 8vh, 5.5rem);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: clamp(2.5rem, 6vh, 4rem) clamp(1.5rem, 3vw, 2.5rem);
 }
 
 .look {
   margin: 0;
-  width: min(100%, 720px);
+  width: 100%;
 }
 
 .look img { width: 100%; }
 
-.look-video { width: min(100%, 960px); }
+.look-video {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: min(100%, 960px);
+  margin-top: clamp(1rem, 3vh, 2rem);
+}
 
 .look-video video { width: 100%; }
 
@@ -375,4 +380,6 @@ a:focus-visible, button:focus-visible {
   .site-head { flex-direction: column; gap: 1.1rem; align-items: flex-start; }
   .project-details > div { grid-template-columns: 1fr; gap: .2rem; }
   .foot-copy { margin-left: 0; }
+  .lookbook { grid-template-columns: 1fr; }
+  .look-video { width: 100%; }
 }

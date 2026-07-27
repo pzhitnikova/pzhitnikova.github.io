@@ -15,7 +15,7 @@ layout: default
     {%- if page.location %}{% assign meta = meta | push: page.location %}{% endif -%}
     {%- if page.year %}{% assign year_s = page.year | append: "" %}{% assign meta = meta | push: year_s %}{% endif -%}
     {%- if meta.size > 0 -%}
-    <p class="label project-meta">{{ meta | join: " &nbsp;&middot;&nbsp; " }}</p>
+    <p class="label project-meta">{{ meta | join: " &nbsp;/&nbsp; " }}</p>
     {%- endif -%}
   </header>
 
