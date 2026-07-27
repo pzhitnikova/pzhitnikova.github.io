@@ -216,28 +216,28 @@ a:focus-visible, button:focus-visible {
 
 /* ── Pagina progetto ──────────────────────────────────────── */
 
-.backlink { margin: clamp(2rem, 5vh, 3.2rem) 0 0; }
+.backlink { margin: clamp(1.4rem, 3.5vh, 2.2rem) 0 0; }
 
-.project-head { margin: clamp(2.2rem, 6vh, 4rem) 0 0; }
+.project-head { margin: clamp(1.5rem, 4vh, 2.4rem) 0 0; }
 
 .project-head h1, .page h1 {
-  font-size: clamp(2.6rem, 7.5vw, 5rem);
-  line-height: 1.05;
-  margin: 0 0 1.4rem;
+  font-size: clamp(1.9rem, 4.5vw, 3.1rem);
+  line-height: 1.08;
+  margin: 0 0 .9rem;
 }
 
 .project-meta {
   border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
-  padding: .85rem 0;
+  padding: .7rem 0;
   margin: 0;
 }
 
 .project-body {
   max-width: var(--measure);
-  margin: clamp(2rem, 5vh, 3rem) 0 0;
-  font-size: 1.04rem;
-  line-height: 1.85;
+  margin: clamp(1.4rem, 3.5vh, 2.2rem) 0 0;
+  font-size: 1rem;
+  line-height: 1.8;
 }
 .project-body p { margin: 0 0 1.2em; }
 
@@ -258,7 +258,7 @@ a:focus-visible, button:focus-visible {
 
 /* Lookbook: dittico — foto a coppie, video centrato sotto */
 .lookbook {
-  margin: clamp(3.5rem, 9vh, 6rem) 0 0;
+  margin: clamp(2.4rem, 6vh, 4rem) 0 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: start;
@@ -297,7 +297,7 @@ a:focus-visible, button:focus-visible {
 .pager-next { text-align: right; margin-left: auto; }
 
 .pager-link {
-  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  font-size: clamp(1.2rem, 2.8vw, 1.6rem);
   font-style: italic;
   transition: color .3s ease;
 }
@@ -305,7 +305,7 @@ a:focus-visible, button:focus-visible {
 
 /* ── Pagine statiche / 404 ────────────────────────────────── */
 
-.page h1 { margin-top: clamp(2.5rem, 7vh, 4.5rem); }
+.page h1 { margin-top: clamp(1.8rem, 5vh, 3rem); }
 
 .page-body {
   max-width: var(--measure);
@@ -315,7 +315,7 @@ a:focus-visible, button:focus-visible {
 .contact-list { margin-top: 3rem; }
 
 .notfound { padding: clamp(4rem, 15vh, 9rem) 0; }
-.notfound h1 { font-size: clamp(2.4rem, 7vw, 4.5rem); font-style: italic; margin: .4em 0 1em; }
+.notfound h1 { font-size: clamp(1.9rem, 4.5vw, 3rem); font-style: italic; margin: .4em 0 1em; }
 
 /* ── Footer ───────────────────────────────────────────────── */
 
