@@ -60,9 +60,9 @@ a:focus-visible, button:focus-visible {
 
 .label {
   font-family: var(--sans);
-  font-size: .6rem;
+  font-size: .55rem;
   font-weight: 400;
-  letter-spacing: .28em;
+  letter-spacing: .26em;
   text-transform: uppercase;
   color: var(--ink-dim);
 }
@@ -192,9 +192,9 @@ a:focus-visible, button:focus-visible {
 }
 
 .card-title {
-  font-size: .78rem;
+  font-size: .72rem;
   font-weight: 400;
-  letter-spacing: .26em;
+  letter-spacing: .24em;
   text-transform: uppercase;
 }
 
@@ -210,13 +210,13 @@ a:focus-visible, button:focus-visible {
 .card-year {
   font-family: var(--serif);
   font-style: italic;
-  font-size: .95rem;
+  font-size: .88rem;
   color: var(--ink-dim);
 }
 
 /* ── Pagina progetto ──────────────────────────────────────── */
 
-.backlink { margin: clamp(1.2rem, 3vh, 1.8rem) 0 0; font-size: .78rem; }
+.backlink { margin: clamp(1.2rem, 3vh, 1.8rem) 0 0; font-size: .72rem; }
 
 .project-head { margin: clamp(1.2rem, 3.2vh, 1.9rem) 0 0; }
 
@@ -229,15 +229,15 @@ a:focus-visible, button:focus-visible {
 .project-meta {
   border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
-  padding: .5rem 0;
+  padding: .42rem 0;
   margin: 0;
 }
 
 .project-body {
   max-width: var(--measure);
   margin: clamp(1.2rem, 3vh, 1.8rem) 0 0;
-  font-size: .9rem;
-  line-height: 1.75;
+  font-size: .85rem;
+  line-height: 1.7;
 }
 .project-body p { margin: 0 0 1.2em; }
 
@@ -254,7 +254,7 @@ a:focus-visible, button:focus-visible {
 }
 .project-details > div:last-child { border-bottom: 1px solid var(--rule); }
 .project-details dt { padding-top: .2em; }
-.project-details dd { margin: 0; font-size: .9rem; }
+.project-details dd { margin: 0; font-size: .85rem; }
 
 /* Lookbook: dittico — foto a coppie, video centrato sotto */
 .lookbook {
@@ -297,7 +297,7 @@ a:focus-visible, button:focus-visible {
 .pager-next { text-align: right; margin-left: auto; }
 
 .pager-link {
-  font-size: clamp(1.05rem, 2.3vw, 1.35rem);
+  font-size: clamp(1rem, 2.1vw, 1.25rem);
   font-style: italic;
   transition: color .3s ease;
 }
@@ -332,14 +332,14 @@ a:focus-visible, button:focus-visible {
   margin: 0;
   font-family: var(--serif);
   font-style: italic;
-  font-size: 1.05rem;
+  font-size: .95rem;
 }
 
-.foot-links { margin: 0; display: flex; gap: 1.8rem; font-size: .82rem; }
+.foot-links { margin: 0; display: flex; gap: 1.8rem; font-size: .78rem; }
 
 .foot-copy {
   margin: 0 0 0 auto;
-  font-size: .68rem;
+  font-size: .6rem;
   letter-spacing: .18em;
   text-transform: uppercase;
   color: var(--ink-dim);
