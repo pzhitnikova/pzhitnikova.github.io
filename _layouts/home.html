@@ -24,17 +24,16 @@ layout: default
       {%- endfor -%}
     {%- endif -%}
     <a class="card fade-up" href="{{ p.url | relative_url }}" style="--d:{{ forloop.index0 | times: 90 }}ms">
-      <span class="num" aria-hidden="true">{{ forloop.index | prepend: '00' | slice: -2, 2 }}</span>
+      <span class="card-line">
+        <span class="card-title"><span>{{ p.title }}</span></span>
+        <span class="card-year">{{ p.year }}</span>
+      </span>
       <figure>
         {%- if cover_path -%}
         <img src="{{ cover_path | relative_url }}" alt="{{ p.title }}, cover"
              {% if forloop.index <= 2 %}fetchpriority="high"{% else %}loading="lazy"{% endif %}>
         {%- endif -%}
       </figure>
-      <span class="card-line">
-        <span class="card-title"><span>{{ p.title }}</span></span>
-        <span class="card-year">{{ p.year }}</span>
-      </span>
     </a>
   {%- endfor -%}
 </section>
