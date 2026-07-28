@@ -53,7 +53,7 @@ layout: default
     {%- endfor -%}
 
     {%- if page.video -%}
-    <figure class="look look-video">
+    <figure class="look look-video{% if page.video_portrait %} look-video-portrait{% endif %}">
       <video controls playsinline preload="metadata"
              {% if page.video_poster %}poster="{{ proj_dir | append: page.video_poster | relative_url }}"{% endif %}
              src="{{ proj_dir | append: page.video | relative_url }}"></video>

@@ -40,7 +40,8 @@ Dopo ~1 minuto il progetto appare in home e la sua pagina è su
 
 Metti il file `.mp4` nella cartella delle foto del progetto e nella scheda
 scrivi `video: nomefile.mp4`. Facoltativi: `video_poster: poster.jpg`
-(anteprima) e `video_caption:` (didascalia). Un'immagine chiamata
+(anteprima), `video_caption:` (didascalia) e `video_portrait: true` se il
+video è girato in verticale (lo mostra in colonna stretta). Un'immagine chiamata
 `poster.jpg` non compare nel lookbook: è riservata all'anteprima del video.
 
 ## Consigli sui file

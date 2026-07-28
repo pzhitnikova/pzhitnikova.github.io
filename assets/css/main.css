@@ -295,6 +295,9 @@ a:focus-visible, button:focus-visible {
 
 .look-video video { width: 100%; }
 
+/* video girato in verticale: colonna stretta */
+.look-video-portrait { width: min(100%, 440px); }
+
 .look-video figcaption { margin-top: 1rem; text-align: center; }
 
 /* ── Pager prev/next ──────────────────────────────────────── */

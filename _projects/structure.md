@@ -8,6 +8,7 @@ cover: 01-solo.jpg
 og_image: /assets/projects/structure/01-solo.jpg
 video: runway.mp4
 video_poster: poster.jpg
+video_portrait: true
 video_caption: Runway, Krakow 2024
 credits: "Runway photo: Ana Zborowska"
 ---

@@ -20,6 +20,7 @@ order: 99            # posizione nella griglia della home (1 = primo)
 # video: sfilata.mp4          # opzionale, dentro la cartella del progetto
 # video_poster: poster.jpg    # opzionale, immagine di anteprima del video
 # video_caption: Didascalia   # opzionale
+# video_portrait: true        # opzionale, se il video e' verticale
 
 # materials: Cotone riciclato, tulle, perline di vetro   # opzionale
 # credits: "Photo: Nome Cognome — Model: Nome Cognome"   # opzionale
