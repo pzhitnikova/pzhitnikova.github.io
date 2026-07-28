@@ -4,6 +4,6 @@ title: About
 permalink: /about/
 ---
 
-P. Zhitnikova is a fashion designer.
+Polina Zhitnikova is a fashion designer.
 
 Work shown at Krakow Fashion Week.

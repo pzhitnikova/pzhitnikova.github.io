@@ -1,17 +1,17 @@
 # ── Impostazioni del sito ─────────────────────────────────────
 # Modifica qui nome, bio breve e contatti: il resto del sito si aggiorna da solo.
 
-title: ZHITNIKOVA            # nome nel masthead e nel footer
+title: Polina Zhitnikova     # nome nel masthead (appare in maiuscolo)
 tagline: Fashion Designer
 description: >-
-  Fashion design portfolio of P. Zhitnikova — collections, runway shows and selected work.
+  Fashion design portfolio of Polina Zhitnikova: collections, runway shows and selected work.
 
 url: "https://pzhitnikova.github.io"
 baseurl: ""
 lang: en
 
 author:
-  name: P. Zhitnikova        # nome esteso (footer, about)
+  name: Polina Zhitnikova    # nome esteso (about, contatti)
   email: ""                  # es. nome@dominio.com — se vuoto, il link non appare
   instagram: ""              # solo lo username, senza @ — se vuoto, il link non appare
 
