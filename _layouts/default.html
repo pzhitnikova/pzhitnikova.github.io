@@ -34,17 +34,5 @@
   <main id="main">
     {{ content }}
   </main>
-  <footer class="site-foot">
-    <p class="foot-name">{{ site.author.name }}</p>
-    <p class="foot-links">
-      {%- if site.author.email != "" -%}
-      <a class="textlink" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
-      {%- endif -%}
-      {%- if site.author.instagram != "" -%}
-      <a class="textlink" href="https://www.instagram.com/{{ site.author.instagram }}" rel="noopener">Instagram</a>
-      {%- endif -%}
-    </p>
-    <p class="foot-copy">© {{ site.time | date: "%Y" }} {{ site.author.name }}</p>
-  </footer>
 </body>
 </html>

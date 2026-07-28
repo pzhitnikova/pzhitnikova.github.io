@@ -315,34 +315,6 @@ a:focus-visible, button:focus-visible {
 .notfound { padding: clamp(4rem, 15vh, 9rem) 0; }
 .notfound h1 { font-size: clamp(1.7rem, 3.5vw, 2.4rem); font-style: italic; margin: .4em 0 1em; }
 
-/* ── Footer ───────────────────────────────────────────────── */
-
-.site-foot {
-  border-top: 1px solid var(--rule);
-  padding: 2rem 0 2.8rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: .6rem 2.5rem;
-}
-
-.foot-name {
-  margin: 0;
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: .95rem;
-}
-
-.foot-links { margin: 0; display: flex; gap: 1.8rem; font-size: .78rem; }
-
-.foot-copy {
-  margin: 0 0 0 auto;
-  font-size: .6rem;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  color: var(--ink-dim);
-}
-
 /* ── Motion ───────────────────────────────────────────────── */
 
 @media (prefers-reduced-motion: no-preference) {
@@ -375,7 +347,6 @@ a:focus-visible, button:focus-visible {
   .card:nth-child(even).fade-up { animation-name: fadeUpCard; }
   .site-head { flex-direction: column; gap: 1.1rem; align-items: flex-start; }
   .project-details > div { grid-template-columns: 1fr; gap: .2rem; }
-  .foot-copy { margin-left: 0; }
   .lookbook { grid-template-columns: 1fr; }
   .look-video { width: 100%; }
 }
