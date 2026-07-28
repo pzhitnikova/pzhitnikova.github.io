@@ -42,7 +42,10 @@ layout: default
       {%- assign ext = f.extname | downcase -%}
       {%- if ext == '.jpg' or ext == '.jpeg' or ext == '.png' or ext == '.webp' or ext == '.avif' or ext == '.gif' -%}
         {%- unless f.name contains 'poster' -%}
-        <figure class="look">
+        {%- assign lookclass = 'look' -%}
+        {%- if f.name contains 'wide' %}{% assign lookclass = 'look look-wide' %}{% endif -%}
+        {%- if f.name contains 'solo' %}{% assign lookclass = 'look look-solo' %}{% endif -%}
+        <figure class="{{ lookclass }}">
           <img src="{{ f.path | relative_url }}" alt="{{ page.title }}, look {{ forloop.index }}" loading="lazy">
         </figure>
         {%- endunless -%}

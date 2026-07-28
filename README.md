@@ -19,6 +19,10 @@ nome `nome-progetto/x` (creando la cartella), oppure più semplice: *Add file
 nell'ordine in cui devono apparire: `01.jpg`, `02.jpg`, `03.jpg` …
 L'ultima foto dovrebbe essere la più forte (chiude il lookbook).
 
+Le foto appaiono affiancate a coppie. Due suffissi cambiano la disposizione:
+- `05-wide.jpg`: la foto occupa tutta la riga (per foto orizzontali o di gruppo)
+- `05-solo.jpg`: la foto sta da sola, centrata (per una verticale da far respirare)
+
 **2. Crea la scheda del progetto.**
 In `_projects/` apri `TEMPLATE.md`, copia il contenuto e crea un nuovo file
 chiamato `nome-progetto.md` — **stesso nome della cartella delle foto**.

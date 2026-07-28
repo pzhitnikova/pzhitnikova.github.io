@@ -272,6 +272,20 @@ a:focus-visible, button:focus-visible {
 
 .look img { width: 100%; }
 
+/* foto orizzontale o di gruppo: tutta la riga */
+.look-wide {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: min(100%, 960px);
+}
+
+/* foto verticale singola: centrata, momento editoriale */
+.look-solo {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: min(100%, 480px);
+}
+
 .look-video {
   grid-column: 1 / -1;
   justify-self: center;
