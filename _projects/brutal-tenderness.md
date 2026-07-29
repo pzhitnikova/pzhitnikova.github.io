@@ -8,7 +8,6 @@ cover: 01-wide.jpg
 og_image: /assets/projects/brutal-tenderness/01-wide.jpg
 video: runway.mp4
 video_poster: poster.jpg
-video_caption: Show, Moscow 2023
 ---
 
 <!-- Sostituisci questa riga con il tuo concept statement. -->

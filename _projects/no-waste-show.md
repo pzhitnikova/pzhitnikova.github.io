@@ -8,7 +8,6 @@ cover: 02.jpg
 og_image: /assets/projects/no-waste-show/02.jpg
 video: runway.mp4
 video_poster: poster.jpg
-video_caption: Runway, Krakow Fashion Week 2024
 ---
 
 <!-- Sostituisci questa riga con il tuo concept statement. -->
