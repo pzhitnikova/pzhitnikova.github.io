@@ -60,6 +60,14 @@ layout: default
       {%- if page.video_caption -%}<figcaption class="label">{{ page.video_caption }}</figcaption>{%- endif -%}
     </figure>
     {%- endif -%}
+
+    {%- for v in page.videos -%}
+    <figure class="look">
+      <video controls playsinline preload="metadata"
+             {% if v.poster %}poster="{{ proj_dir | append: v.poster | relative_url }}"{% endif %}
+             src="{{ proj_dir | append: v.file | relative_url }}"></video>
+    </figure>
+    {%- endfor -%}
   </div>
 
   {%- assign projects = site.projects | where_exp: "p", "p.published != false" | sort: "order" -%}

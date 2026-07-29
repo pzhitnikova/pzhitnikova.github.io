@@ -250,7 +250,7 @@ a:focus-visible, button:focus-visible {
   width: 100%;
 }
 
-.look img { width: 100%; }
+.look img, .look video { width: 100%; }
 
 /* foto orizzontale o di gruppo: tutta la riga */
 .look-wide {

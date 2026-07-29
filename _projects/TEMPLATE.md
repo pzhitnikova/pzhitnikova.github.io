@@ -22,6 +22,13 @@ order: 99            # posizione nella griglia della home (1 = primo)
 # video_poster: poster.jpg    # opzionale, immagine di anteprima del video
 # video_caption: Didascalia   # opzionale
 # video_portrait: true        # opzionale, se il video e' verticale
+#
+# Piu' video affiancati come le foto (nomi delle anteprime con "poster-"):
+# videos:
+#   - file: primo.mp4
+#     poster: poster-primo.jpg
+#   - file: secondo.mp4
+#     poster: poster-secondo.jpg
 
 # materials: Cotone riciclato, tulle, perline di vetro   # opzionale
 # credits: "Photo: Nome Cognome — Model: Nome Cognome"   # opzionale
