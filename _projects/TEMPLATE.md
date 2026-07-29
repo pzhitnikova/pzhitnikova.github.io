@@ -15,6 +15,7 @@ year: 2026
 order: 99            # posizione nella griglia della home (1 = primo)
 
 # cover: 03.jpg      # quale foto usare in home (se omesso: la prima)
+# cover_position: 60% 50%   # sposta l'inquadratura della cover (orizzontale% verticale%)
 # og_image: /assets/projects/NOME-CARTELLA/03.jpg   # anteprima social
 
 # video: sfilata.mp4          # opzionale, dentro la cartella del progetto

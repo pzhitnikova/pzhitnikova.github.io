@@ -31,6 +31,7 @@ layout: default
       <figure>
         {%- if cover_path -%}
         <img src="{{ cover_path | relative_url }}" alt="{{ p.title }}, cover"
+             {% if p.cover_position %}style="object-position: {{ p.cover_position }}"{% endif %}
              {% if forloop.index <= 2 %}fetchpriority="high"{% else %}loading="lazy"{% endif %}>
         {%- endif -%}
       </figure>
