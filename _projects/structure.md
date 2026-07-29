@@ -3,7 +3,7 @@ title: Structure
 event: Krakow Fashion Show
 location: Kraków
 year: 2024
-order: 3
+order: 2
 cover: 01-solo.jpg
 og_image: /assets/projects/structure/01-solo.jpg
 video: runway.mp4
