@@ -3,7 +3,7 @@ title: No Waste Show
 event: Krakow Fashion Week
 location: Kraków
 year: 2024
-order: 3
+order: 4
 cover: 02.jpg
 og_image: /assets/projects/no-waste-show/02.jpg
 video: runway.mp4

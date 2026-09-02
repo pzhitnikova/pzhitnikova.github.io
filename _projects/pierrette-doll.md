@@ -1,7 +1,7 @@
 ---
 title: Pierrette Doll
 year: 2025
-order: 1
+order: 2
 cover: 01-solo.jpg
 og_image: /assets/projects/pierrette-doll/01-solo.jpg
 videos:
